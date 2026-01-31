@@ -1,5 +1,94 @@
 <template id="customers-template">
 
-<h2>Customers</h2>
+<div class="template-container">
+        <div class="template-header">
+            <h2>customers</h2>
+
+            <div class="template-header-buttons">
+                <button class="outlined-primary-button">
+                    <i class="fas fa-download"></i>
+                    <span>Download report</span>
+                </button>
+                <button class="solid-primary-button" id="addcustomerBtn">
+                    <i class="fas fa-plus"></i>
+                    <span>Add customer</span>
+                </button>
+            </div>
+        </div>
+        <div id="customersList" class="template-body">
+
+        </div>
+    </div>
+
+    <dialog id="customerModal" class="default-modal">
+        <form id="customerForm" class="default-modal-content">
+            <div class="default-modal-header">
+                <h2>customer Form</h2>
+                <button type="button" class="icon-button" id="closeModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="default-modal-body">
+                <div class="default-field">
+                    <label for="nombreTxt">Nombre:</label>
+                    <input type="text" id="nombreTxt" name="nombre" placeholder="Nombre completo" required>
+                </div>
+
+                <div class="default-field">
+                    <label for="edadNum">Edad:</label>
+                    <input type="number" id="edadNum" name="edad" placeholder="Edad" min="18" required>
+                </div>
+
+                <div class="default-field">
+                    <label for="correoTxt">Correo Electrónico:</label>
+                    <input type="email" id="correoTxt" name="correo" 
+                           pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                           title="Ingrese un correo electrónico válido (ejemplo: usuario@dominio.com)"
+                           placeholder="correo@ejemplo.com" 
+                           required>
+                </div>
+
+                <div class="default-field">
+                    <label for="telefonoTxt">Número Telefónico:</label>
+                    <input type="tel" id="telefonoTxt" name="telefono" 
+                           pattern="[0-9]{10}" 
+                           title="Ingrese exactamente 10 números"
+                           maxlength="10" 
+                           placeholder="1234567890"
+                           required>
+                </div>
+
+                <div class="default-field">
+                    <label for="direccionTxt">Dirección:</label>
+                    <textarea id="direccionTxt" name="direccion" placeholder="Dirección completa" rows="3" required></textarea>
+                </div>
+
+                <div class="default-field">
+                    <label for="fotografiaUrlTxt">Fotografía (URL):</label>
+                    <input type="text" id="fotografiaUrlTxt" name="fotografia" 
+                           placeholder="Ingrese URL de la imagen">
+                </div>
+
+                <div class="default-field">
+                    <label for="fotografiaFile">o seleccione un archivo:</label>
+                    <input type="file" id="fotografiaFile" name="fotografiaFile" 
+                           accept="image/*">
+                </div>
+
+                <img id="customerImage" />
+            </div>
+
+            <div class="default-modal-footer">
+                <button type="submit" class="solid-primary-button" id="saveModalBtn">
+                    Save
+                </button>
+
+                <button type="button" class="solid-danger-button" id="cancelModalBtn">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </dialog>
 
 </template>
