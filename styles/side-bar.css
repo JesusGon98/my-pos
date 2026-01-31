@@ -1,0 +1,134 @@
+.side-bar {
+    display: block;
+    width: 280px;
+    height: 100vh;
+}
+
+.side-bar-content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 1;
+    height: calc(100% - 48px);
+    background-color: #212121;
+    color: #FFFFFF;
+    padding: 24px;
+    gap: 24px;
+}
+
+.side-bar-content > .logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.side-bar-content > .logo-content > img {
+    height: 24px;
+}
+
+.side-bar-content > .logo-content > h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary-color);
+    margin: 0px;
+}
+
+.side-bar-content > .profile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.side-bar-content > .profile > img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 99px;
+}
+
+.side-bar-content > .profile > h3 {
+    margin: 0px;
+}
+
+.side-bar-content > .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-y: auto;
+    height: fit-content;
+}
+
+.side-bar-content > .navigation > .nav-item {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 8px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.side-bar-content > .navigation > .nav-item:hover {
+    color: var(--primary-color);
+}
+
+#closeMenuBtn {
+    background-color: transparent;
+    border: none;
+    display: none;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 99px;
+}
+
+#closeMenuBtn:hover {
+    background-color: #424242;
+}
+
+/* notebook or small desktop */
+@media only screen and (max-width:1280px) { }
+
+/* notebook */
+@media only screen and (max-width:1024px) { }
+
+/* tablet */
+@media only screen and (max-width:900px) { }
+
+/* tablet */
+@media only screen and (max-width:768px) { 
+    .side-bar {
+        width: 100%;
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .side-bar-content {
+        max-width: 80%;
+        padding: 16px;
+        height: calc(100% - 32px);
+    }
+
+    .side-bar-content > .profile {
+        display: flex;
+    }
+
+    #closeMenuBtn {
+        display: flex;
+    }
+}
+
+/* large smartphone */
+@media only screen and (max-width:640px) { }
+
+/* smartphone */
+@media only screen and (max-width:480px) { }

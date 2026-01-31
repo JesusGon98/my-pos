@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metadata-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title-->
+    <title>MY_POS</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <!-- Importacion de hojas de estilos -->
+    <link rel="stylesheet" href="styles/buttons.css" type="text/css">
+    <link rel="stylesheet" href="styles/cards.css" type="text/css">
+    <link rel="stylesheet" href="styles/fields.css" type="text/css">
+    <link rel="stylesheet" href="styles/header.css" type="text/css">
+    <link rel="stylesheet" href="styles/modals.css" type="text/css">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="styles/side-bar.css" type="text/css">
+    <link rel="stylesheet" href="styles/templates.css" type="text/css">
+    <!--Importacion de iconos-->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">  
+     
+    <!--Importacion de Scrips-->
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/navigation.js"></script>
+</head>
+<body>
+    <div class="layout">
+        <!---Barra Lateral--->
+        <div class="side-bar" id="sideBar">
+            <div class="side-bar-content">
+                <button id="closeMenuBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="logo-content">
+                    <img src="assets/img/logo.jpg" />
+                    <h2>MY~POS</h2>
+                </div>
+
+                <div class="profile">
+                    <img name="user-photo" src="assets/img/empty-user.png" />
+                    <h3>Jesus Gonzalez</h3>
+                </div>
+
+                <hr width="100%" />
+
+                <nav class="navigation">
+                    <div class="nav-item" id="dashboardBtn">
+                        <i class="fas fa-chart-bar"></i>
+                        <strong>Dashboard</strong>
+                    </div>
+
+                    <div class="nav-item" id="cashRegisterBtn">
+                        <i class="fas fa-cash-register"></i>
+                        <strong>Cash register</strong>
+                    </div>
+
+                    <div class="nav-item" id="productsBtn">
+                        <i class="fas fa-boxes"></i>
+                        <strong>Products</strong>
+                    </div>
+
+                    <div class="nav-item" id="customersBtn">
+                        <i class="fas fa-users"></i>
+                        <strong>Customers</strong>
+                    </div>
+
+                    <div class="nav-item" id="usersBtn">
+                        <i class="fas fa-user-cog"></i>
+                        <strong>Users</strong>
+                    </div>
+
+                    <div class="nav-item" id="configurationsBtn">
+                        <i class="fas fa-cog"></i>
+                        <strong>Configurations</strong>
+                    </div>
+
+                    <div class="nav-item" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <strong>Logout</strong>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!---Contenido Principal--->
+        <div class="main">
+            <!--header-->
+            <div class="header">
+                <button id="menuBtn" class="icon-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="logo-content">
+                    <img src="assets/img/logo.jpg" />
+                    <h2>MY POS</h2>
+                </div>
+
+                <div class="search-bar">
+                    <button id="searchBtn" class="icon-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <input type="text" name="searchTxt" placeholder="Search..." />
+                </div>
+
+                <div class="profile">
+                    <img name="user-photo" src="assets/img/empty-user.png" />
+                    <h4>Jesus Gonzalez</h4>
+                </div>
+
+                <button id="logoutBtn" class="icon-button-primary">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+            <!-- contenido dinamico-->
+             <main id="content">
+
+             </main>
+        </div>
+
+    </div>
+    
+</body>
+</html>

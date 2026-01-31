@@ -1,0 +1,87 @@
+.default-modal::backdrop {
+    background-color: rgba(0,0,0, 0.3)
+}
+
+.default-modal[open] {
+    width: fit-content;
+    max-height: 90%;
+    padding: 24px;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #424242;
+}
+
+.default-modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.default-modal-content > .default-modal-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.default-modal-content > .default-modal-header > h2 {
+    margin: 0px;
+}
+
+.default-modal-content > .default-modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0px;
+    gap: 16px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.default-modal-content > .default-modal-footer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+}
+
+/* notebook or small desktop */
+@media only screen and (max-width:1280px) { }
+
+/* notebook */
+@media only screen and (max-width:1024px) { }
+
+/* tablet */
+@media only screen and (max-width:900px) { }
+
+/* tablet */
+@media only screen and (max-width:768px) { 
+    .default-modal[open] {
+        width: 80%;
+        padding: 16px;
+    }
+
+    .default-modal-content > .default-modal-header {
+        gap: 16px;
+        padding-bottom: 16px;
+    }
+
+    .default-modal-content > .default-modal-body {
+        padding: 16px 0px;
+    }
+
+    .default-modal-content > .default-modal-footer {
+        padding-top: 16px;
+    }
+}
+
+/* large smartphone */
+@media only screen and (max-width:640px) { }
+
+/* smartphone */
+@media only screen and (max-width:480px) { }

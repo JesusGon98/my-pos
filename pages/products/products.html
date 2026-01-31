@@ -1,0 +1,98 @@
+<template id="products-template">
+
+
+    <div class="template-container">
+        <div class="template-header">
+            <h2>Products</h2>
+
+            <div class="template-header-buttons">
+                <button class="outlined-primary-button">
+                    <i class="fas fa-download"></i>
+                    <span>Download report</span>
+                </button>
+                <button class="solid-primary-button" id="addProductBtn">
+                    <i class="fas fa-plus"></i>
+                    <span>Add product</span>
+                </button>
+            </div>
+        </div>
+        <div id="productsList" class="template-body">
+
+        </div>
+    </div>
+
+    <dialog id="productModal" class="default-modal">
+        <form id="productForm" class="default-modal-content">
+            <div class="default-modal-header">
+                <h2>Product Form</h2>
+                <button type="button" class="icon-button" id="closeModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="default-modal-body">
+                <div class="default-field">
+                    <label for="nameTxt">Name:</label>
+                    <input id="nameTxt" placeholder="Product Name" type="text" minlength="5" maxlength="50" required />
+                </div>
+
+                <div class="default-field">
+                    <label for="descriptionTxt">Description:</label>
+                    <textarea id="descriptionTxt" placeholder="Short description..." rows="6"></textarea>
+                </div>
+
+                <div class="default-field">
+                    <label for="categorySlc">Category:</label>
+                    <select id="categorySlc" required></select>
+                </div>
+
+                <div class="default-field">
+                    <label for="barcodeTxt">Barcode:</label>
+                    <input id="barcodeTxt" placeholder="0000000000" pattern="[A-Z0-9]{10}"
+                        title="Only numbers and letters in uppercase" type="text" required />
+                </div>
+
+                <div class="row-field">
+                    <div class="default-field">
+                        <label for="priceNum">Price:</label>
+                        <input id="priceNum" placeholder="$" type="number" min="0" max="10000" required />
+                    </div>
+
+                    <div class="default-field">
+                        <label for="stockNum">Stock:</label>
+                        <input id="stockNum" placeholder="units" type="number" min="0" required />
+                    </div>
+                </div>
+
+                <div class="row-field">
+                    <div class="default-field">
+                        <label for="minStockNum">Minimum Stock:</label>
+                        <input id="minStockNum" placeholder="units" type="number" min="1" required />
+                    </div>
+
+                    <div class="default-field">
+                        <label for="maxStockNum">Maximum Stock:</label>
+                        <input id="maxStockNum" placeholder="units" type="number" min="1" required />
+                    </div>
+                </div>
+
+                <div class="default-field">
+                    <label for="imageUrlTxt">Image url:</label>
+                    <input id="imageUrlTxt" placeholder="Image for the product" type="text" minlength="1" required />
+                </div>
+
+                <img id="productImage" />
+            </div>
+
+            <div class="default-modal-footer">
+                <button type="submit" class="solid-primary-button" id="saveModalBtn">
+                    Save
+                </button>
+
+                <button type="button" class="solid-danger-button" id="cancelModalBtn">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </dialog>
+</template>

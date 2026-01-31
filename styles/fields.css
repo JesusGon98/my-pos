@@ -1,0 +1,38 @@
+.default-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.default-field > input {
+    height: 36px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline-color: var(--primary-color);
+    padding: 0px 16px;
+}
+
+.default-field > textarea {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline-color: var(--primary-color);
+    padding: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.default-field > select {
+    height: 36px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline-color: var(--primary-color);
+    padding: 0px 16px;
+}
+
+.row-field {
+    display: flex;
+    gap: 16px;
+}
+
+.row-field > .default-field {
+    flex-grow: 1;
+}
